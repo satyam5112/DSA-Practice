@@ -1,6 +1,6 @@
 // find sum of negative and positive integer.
 #include<stdio.h>
-#include<math.h>
+// #include<math.h>
 
 int main()
 {
@@ -13,3 +13,4 @@ int main()
     printf("The sum is:%d",sum);
     return 0;
 }
+ 

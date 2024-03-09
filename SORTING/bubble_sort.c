@@ -1,3 +1,4 @@
+// BUBBLE SORTING
 #include<stdio.h>
 int main()
 {
@@ -32,8 +33,7 @@ int main()
     printf("\n","SORTED ARRAY","\n");
     for(i=0;i<n;i++)
     {
-    printf("%d",arr[i]);
-    printf(" ");
+    printf("%d ",arr[i]);
     }
     return 0;
 }
