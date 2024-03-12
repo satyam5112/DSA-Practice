@@ -1,36 +1,5 @@
-// // PATTERN PRINTING.
-// #include<iostream>
-// using namespace std;
-// int main()
-// {
-//     int h=5,i,j;
-//     // cout<<"Enter the height:";
-//     // cin>>h;
-//     for(i=1;i<=h;i++)
-//     {
-//         char al='A';
-//         for(j=1;j<(2*h);j++)
-//         {
-//             if(j<i)
-//             {
-//                 cout<<" ";
-//                 cout<<" ";
-//             }
-//             if(j>=i && i+j<=10)
-//             {
-//                 cout<<al++;
-//                 cout<<" ";
-//             }
-//             if(i+j>10)
-//             {
-//                 cout<<" ";
-//                 cout<<" ";
-//             }
-//         }
-//         cout<<"\n";
-//     } 
-//     return 0;
-// }
+// PATTERN PRINTING.
+
 #include<iostream>
 using namespace std;
 
@@ -39,21 +8,18 @@ int main() {
     cout << "Enter the height: ";
     cin >> h;
 
-    for(int i = 1; i <= h; i++) {
+    for(int i = h; i >= 1; i--) {
         char al = 'A';
-        for(int j = 1; j < (2 * h); j++) {
-            if(j < i) {
-                cout << " ";
-                cout << " ";
-            }
-            if(j >= i && i + j <= (2 * h - 1)) {
-                cout << al++;
-                cout << " ";
-            }
-            if(i + j > (2 * h - 1)) {
-                cout << " ";
-                cout << " ";
-            }
+        // Print spaces before characters
+        for(int j = h; j > i; j--) {
+            cout << "  ";
+        }
+        // Print characters in increasing order
+        for(int j = 1; j <= 2*i-1; j++) {
+            cout << al++;
+            if (al > 'Z')  // Reset al to 'A' after 'Z'
+                al = 'A';
+            cout << " ";
         }
         cout << "\n";
     }
