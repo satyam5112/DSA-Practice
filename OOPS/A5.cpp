@@ -28,6 +28,33 @@ bool compareByQuantity(const Item& a, const Item& b) {
     return a.quantity < b.quantity;
 }
 
+// Function to edit an item in the shopping list
+void editItem(vector<Item>& items) {
+    int index;
+    cout << "Enter the index of the item you want to edit: ";
+    cin >> index;
+    if (index >= 1 && index <= items.size()) {
+        cout << "Enter new item name: ";
+        cin >> items[index - 1].name;
+        cout << "Enter new quantity: ";
+        cin >> items[index - 1].quantity;
+    } else {
+        cout << "Invalid index." << endl;
+    }
+}
+// Function to remove an item from the shopping list
+void removeItem(vector<Item>& items) {
+    int index;
+    cout << "Enter the index of the item you want to remove: ";
+    cin >> index;
+    if (index >= 1 && index <= items.size()) {
+        items.erase(items.begin() + index - 1);
+        cout << "Item removed successfully." << endl;
+    } else {
+        cout << "Invalid index." << endl;
+    }
+}
+
 // Function to sort the shopping list
 void sortList(vector<Item>& items, char option) {
     switch (option) {
@@ -52,7 +79,11 @@ int main() {
     vector<Item> shoppingList; // Use a vector of Item structs to store items
 
     do {
-        cout << "Enter 'Y' or 'y' to add an item, 'E' or 'e' to edit, 'R' or 'r' to remove, 'S' or 's' to sort, or 'N' or 'n' to stop: ";
+        cout << "   Enter"<<endl<<"'Y' or 'y' to add an item"
+                    <<endl<<"'E' or 'e' to edit"
+                    <<endl<<"'R' or 'r' to remove"
+                    <<endl<<"'S' or 's' to sort"
+                    <<endl<<"'N' or 'n' to stop: ";
         cin >> choice;
 
         switch (choice) {
