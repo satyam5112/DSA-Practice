@@ -79,7 +79,7 @@ int main() {
     vector<Item> shoppingList; // Use a vector of Item structs to store items
 
     do {
-        cout << "   Enter"<<endl<<"'Y' or 'y' to add an item"
+        cout << "---------->Enter<----------"<<endl<<"'Y' or 'y' to add an item"
                     <<endl<<"'E' or 'e' to edit"
                     <<endl<<"'R' or 'r' to remove"
                     <<endl<<"'S' or 's' to sort"
