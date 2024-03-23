@@ -1,4 +1,4 @@
-// A program to create ann array of objects.
+// A program to create an array of objects.
 #include<iostream>
 using namespace std;
 class A
